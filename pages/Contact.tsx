@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -45,24 +45,34 @@ const Contact: React.FC = () => {
                 <FaMapMarkerAlt className="h-8 w-8 text-blue-700 mt-1 me-4 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold">العنوان</h3>
-                  <p className="text-gray-600">عمان, الأردن</p>
-                  <p className="text-gray-600">(يرجى إضافة العنوان التفصيلي هنا)</p>
+                  <p className="text-gray-600">ابو نصير- الشارع الرئيسي - قرب الإشارة - فوق مطعم بوبايز - بنايه ٧١ - طابق ١ - مكتب ٣</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <FaPhone className="h-8 w-8 text-blue-700 mt-1 me-4 flex-shrink-0" />
+                <FaWhatsapp className="h-8 w-8 text-blue-700 mt-1 me-4 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold">الهاتف</h3>
-                  <p className="text-gray-600" dir="ltr">+962 7 XX XXX XXX</p>
+                  <h3 className="text-lg font-semibold">واتساب</h3>
+                  <a href="https://wa.me/962782904344" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700" dir="ltr">+962 7 8290 4344</a>
                 </div>
               </div>
               <div className="flex items-start">
                 <FaEnvelope className="h-8 w-8 text-blue-700 mt-1 me-4 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold">البريد الإلكتروني</h3>
-                  <p className="text-gray-600">contact@nourbarakat.com</p>
+                  <a href="mailto:nour@nourbarakat.com" className="text-gray-600 hover:text-blue-700">nour@nourbarakat.com</a>
                 </div>
               </div>
+               <div className="border-t pt-6">
+                 <a 
+                    href="https://wa.me/962782904344" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center bg-green-500 text-white font-bold py-3 px-6 rounded-md hover:bg-green-600 transition duration-300"
+                >
+                    <FaWhatsapp className="me-3 h-6 w-6" />
+                    أرسل رسالة عبر واتساب
+                </a>
+               </div>
             </div>
           </div>
 

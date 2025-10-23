@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBalanceScale, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaBalanceScale, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
@@ -32,15 +32,15 @@ const Footer: React.FC = () => {
             <ul className="text-gray-300">
               <li className="flex items-center mb-3">
                 <FaMapMarkerAlt className="w-5 h-5 me-3" />
-                <span>عمان, الأردن (العنوان الكامل)</span>
+                <span>ابو نصير - الشارع الرئيسي - بنايه ٧١</span>
               </li>
               <li className="flex items-center mb-3">
-                <FaPhone className="w-5 h-5 me-3" />
-                <span>+962 7 XX XXX XXX</span>
+                <FaWhatsapp className="w-5 h-5 me-3" />
+                <a href="https://wa.me/962782904344" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400" dir="ltr">+962 7 8290 4344</a>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="w-5 h-5 me-3" />
-                <span>contact@nourbarakat.com</span>
+                <a href="mailto:nour@nourbarakat.com" className="hover:text-blue-400">nour@nourbarakat.com</a>
               </li>
             </ul>
           </div>
