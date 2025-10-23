@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 
@@ -8,8 +7,10 @@ const Contact: React.FC = () => {
     email: '',
     subject: '',
     message: '',
+    honeypot: '', // Anti-spam field
   });
 
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [status, setStatus] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -17,13 +18,41 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const validateForm = (): boolean => {
+    const newErrors: { [key: string]: string } = {};
+
+    if (!formData.name.trim()) newErrors.name = 'الاسم الكامل مطلوب.';
+    if (!formData.email.trim()) {
+      newErrors.email = 'البريد الإلكتروني مطلوب.';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'صيغة البريد الإلكتروني غير صحيحة.';
+    }
+    if (!formData.subject.trim()) newErrors.subject = 'الموضوع مطلوب.';
+    if (!formData.message.trim()) newErrors.message = 'الرسالة مطلوبة.';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle form submission, e.g., send to an API endpoint.
-    // For this static site, we'll just simulate a success message.
-    console.log('Form data submitted:', formData);
-    setStatus('شكراً لتواصلك! تم استلام رسالتك وسنرد عليك في أقرب وقت ممكن.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setStatus(''); // Reset status on new submission
+
+    // Honeypot check for spam
+    if (formData.honeypot) {
+      console.log('Spam submission detected');
+      // Silently fail without proceeding
+      return;
+    }
+
+    if (validateForm()) {
+      // Here you would typically handle form submission, e.g., send to an API endpoint.
+      // For this static site, we'll just simulate a success message.
+      console.log('Form data submitted:', formData);
+      setStatus('شكراً لتواصلك! تم استلام رسالتك وسنرد عليك في أقرب وقت ممكن.');
+      setFormData({ name: '', email: '', subject: '', message: '', honeypot: '' });
+      setErrors({});
+    }
   };
 
   return (
@@ -79,31 +108,89 @@ const Contact: React.FC = () => {
           {/* Contact Form */}
           <div className="lg:w-2/3 bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-6">أرسل لنا رسالة</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+              {/* Honeypot field for spam prevention, invisible to users */}
+              <div className="absolute w-0 h-0 overflow-hidden">
+                <label htmlFor="honeypot">Please leave this field blank</label>
+                <input 
+                  type="text" 
+                  id="honeypot" 
+                  name="honeypot" 
+                  value={formData.honeypot}
+                  onChange={handleChange}
+                  tabIndex={-1} 
+                  autoComplete="off"
+                />
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">الاسم الكامل</label>
-                  <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"/>
+                  <input 
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    value={formData.name} 
+                    onChange={handleChange} 
+                    required 
+                    aria-invalid={!!errors.name}
+                    aria-describedby={errors.name ? "name-error" : undefined}
+                    className={`w-full px-4 py-2 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md focus:ring-blue-500 focus:border-blue-500 transition-colors`}
+                  />
+                  {errors.name && <p id="name-error" className="text-red-600 text-sm mt-1">{errors.name}</p>}
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">البريد الإلكتروني</label>
-                  <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"/>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    required 
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? "email-error" : undefined}
+                    className={`w-full px-4 py-2 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md focus:ring-blue-500 focus:border-blue-500 transition-colors`}
+                  />
+                  {errors.email && <p id="email-error" className="text-red-600 text-sm mt-1">{errors.email}</p>}
                 </div>
               </div>
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">الموضوع</label>
-                <input type="text" name="subject" id="subject" value={formData.subject} onChange={handleChange} required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"/>
+                <input 
+                  type="text" 
+                  name="subject" 
+                  id="subject" 
+                  value={formData.subject} 
+                  onChange={handleChange} 
+                  required 
+                  aria-invalid={!!errors.subject}
+                  aria-describedby={errors.subject ? "subject-error" : undefined}
+                  className={`w-full px-4 py-2 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-md focus:ring-blue-500 focus:border-blue-500 transition-colors`}
+                />
+                {errors.subject && <p id="subject-error" className="text-red-600 text-sm mt-1">{errors.subject}</p>}
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">رسالتك</label>
-                <textarea name="message" id="message" rows={5} value={formData.message} onChange={handleChange} required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
+                <textarea 
+                  name="message" 
+                  id="message" 
+                  rows={5} 
+                  value={formData.message} 
+                  onChange={handleChange} 
+                  required 
+                  aria-invalid={!!errors.message}
+                  aria-describedby={errors.message ? "message-error" : undefined}
+                  className={`w-full px-4 py-2 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-md focus:ring-blue-500 focus:border-blue-500 transition-colors`}
+                ></textarea>
+                {errors.message && <p id="message-error" className="text-red-600 text-sm mt-1">{errors.message}</p>}
               </div>
               <div>
                 <button type="submit" className="w-full bg-blue-700 text-white font-bold py-3 px-6 rounded-md hover:bg-blue-800 transition duration-300">
                   إرسال الرسالة
                 </button>
               </div>
-              {status && <p className="text-center text-green-600 bg-green-100 p-3 rounded-md">{status}</p>}
+              {status && <p className="text-center text-green-600 bg-green-100 p-3 rounded-md mt-4">{status}</p>}
             </form>
           </div>
         </div>
