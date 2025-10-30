@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import { FaWhatsapp, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
@@ -96,13 +96,6 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold">واتساب</h3>
                   <a href="https://wa.me/962799262786" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700" dir="ltr">+962 79 926 2786</a>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <FaEnvelope className="h-8 w-8 text-blue-700 mt-1 me-4 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold">البريد الإلكتروني</h3>
-                  <a href="mailto:nour@nourbarakat.com" className="text-gray-600 hover:text-blue-700">nour@nourbarakat.com</a>
                 </div>
               </div>
                <div className="border-t pt-6 space-y-3">

@@ -10,7 +10,6 @@ export const LocalBusinessSchema: React.FC = () => {
     "image": "https://ksalah1.github.io/NourBarakat.com/og-image.jpg",
     "url": "https://ksalah1.github.io/NourBarakat.com",
     "telephone": "+962799262786",
-    "email": "nour@nourbarakat.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "ابو نصير - الشارع الرئيسي - قرب الإشارة - فوق مطعم بوبايز - بنايه ٧١ - طابق ١ - مكتب ٣",
@@ -72,7 +71,6 @@ export const AttorneySchema: React.FC = () => {
     "@type": "Attorney",
     "name": "نور بركات",
     "telephone": "+962799262786",
-    "email": "nour@nourbarakat.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "عمان",
