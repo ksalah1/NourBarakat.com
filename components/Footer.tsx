@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center mb-3">
                 <FaWhatsapp className="w-5 h-5 me-3" />
-                <a href="https://wa.me/962782904344" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400" dir="ltr">+962 7 8290 4344</a>
+                <a href="https://wa.me/962799262786" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400" dir="ltr">+962 79 926 2786</a>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="w-5 h-5 me-3" />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -78,10 +78,17 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start">
+                <FaPhone className="h-8 w-8 text-blue-700 mt-1 me-4 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold">الهاتف</h3>
+                  <a href="tel:+962799262786" className="text-gray-600 hover:text-blue-700" dir="ltr">+962 79 926 2786</a>
+                </div>
+              </div>
+              <div className="flex items-start">
                 <FaWhatsapp className="h-8 w-8 text-blue-700 mt-1 me-4 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold">واتساب</h3>
-                  <a href="https://wa.me/962782904344" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700" dir="ltr">+962 7 8290 4344</a>
+                  <a href="https://wa.me/962799262786" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700" dir="ltr">+962 79 926 2786</a>
                 </div>
               </div>
               <div className="flex items-start">
@@ -91,10 +98,17 @@ const Contact: React.FC = () => {
                   <a href="mailto:nour@nourbarakat.com" className="text-gray-600 hover:text-blue-700">nour@nourbarakat.com</a>
                 </div>
               </div>
-               <div className="border-t pt-6">
-                 <a 
-                    href="https://wa.me/962782904344" 
-                    target="_blank" 
+               <div className="border-t pt-6 space-y-3">
+                 <a
+                    href="tel:+962799262786"
+                    className="w-full flex items-center justify-center bg-blue-700 text-white font-bold py-3 px-6 rounded-md hover:bg-blue-800 transition duration-300"
+                >
+                    <FaPhone className="me-3 h-5 w-5" />
+                    اتصل الآن
+                </a>
+                 <a
+                    href="https://wa.me/962799262786"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-full flex items-center justify-center bg-green-500 text-white font-bold py-3 px-6 rounded-md hover:bg-green-600 transition duration-300"
                 >
