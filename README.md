@@ -185,6 +185,10 @@ npm run lint
 ---
 
 ## 🌍 النشر | Deployment
+</div>
+
+This contains everything you need to run your app locally.
+
 
 الموقع منشور تلقائياً على **GitHub Pages** عند كل دفع (push) للفرع الرئيسي:
 
