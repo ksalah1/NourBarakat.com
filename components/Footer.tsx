@@ -1,14 +1,13 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBalanceScale, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
-import { FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaBalanceScale, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center mb-4">
               <FaBalanceScale className="h-8 w-8 me-3 text-blue-400" />
@@ -38,19 +37,7 @@ const Footer: React.FC = () => {
                 <FaWhatsapp className="w-5 h-5 me-3" />
                 <a href="https://wa.me/962799262786" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400" dir="ltr">+962 79 926 2786</a>
               </li>
-              <li className="flex items-center">
-                <FaEnvelope className="w-5 h-5 me-3" />
-                <a href="mailto:nour@nourbarakat.com" className="hover:text-blue-400">nour@nourbarakat.com</a>
-              </li>
             </ul>
-          </div>
-           <div>
-            <h3 className="text-lg font-bold mb-4">تابعنا</h3>
-            <div className="flex space-x-4 rtl:space-x-reverse">
-                <a href="#" className="text-gray-400 hover:text-white"><FaLinkedin className="w-6 h-6"/></a>
-                <a href="#" className="text-gray-400 hover:text-white"><FaTwitter className="w-6 h-6"/></a>
-                <a href="#" className="text-gray-400 hover:text-white"><FaFacebook className="w-6 h-6"/></a>
-            </div>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
