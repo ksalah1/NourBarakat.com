@@ -1,0 +1,14 @@
+# Robots.txt for مكتب نور بركات للمحاماة
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ksalah1.github.io/NourBarakat.com/sitemap.xml
+
+# Crawl-delay for courtesy
+Crawl-delay: 1
+
+# Block specific bots if needed (uncomment to enable)
+# User-agent: BadBot
+# Disallow: /

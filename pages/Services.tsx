@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { services } from '../data/services';
 import { FaCheckCircle } from 'react-icons/fa';
 import { CTAButtons } from '../components/CTAButtons';
+import SEO from '../components/SEO';
 
 const Services: React.FC = () => {
     const location = useLocation();
@@ -21,6 +22,12 @@ const Services: React.FC = () => {
 
     return (
         <div className="bg-white py-12">
+            <SEO
+                title="خدماتنا القانونية"
+                description="خدمات قانونية شاملة من مكتب نور بركات: قضايا التأمين، تحصيل الديون، مراجعة العقود، النزاعات العمالية، وقضايا الإيجار. خبرة واحترافية في خدمة الأفراد والشركات."
+                keywords="خدمات قانونية الأردن، محامي تأمين، تحصيل ديون، مراجعة عقود، قانون عمل، قضايا إيجار، استشارات قانونية"
+                canonicalUrl="https://ksalah1.github.io/NourBarakat.com/#/services"
+            />
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900">خدماتنا القانونية</h1>
