@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
           {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
         </button>
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
-          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-lg md:font-medium md:border-0 md:bg-white md:rtl:space-x-reverse">
+          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:gap-6 lg:gap-8 md:mt-0 md:text-lg md:font-medium md:border-0 md:bg-white">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <NavLink

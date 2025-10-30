@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaWhatsapp, FaMapMarkerAlt, FaPhone, FaClock } from 'react-icons/fa';
+import { FaWhatsapp, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Address Card */}
           <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-700 mb-6 mx-auto">
@@ -81,25 +81,6 @@ const Contact: React.FC = () => {
               <FaWhatsapp className="me-3 h-6 w-6" />
               راسلنا على واتساب
             </a>
-          </div>
-        </div>
-
-        {/* Office Hours Section */}
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-          <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-700 mb-6 mx-auto">
-            <FaClock className="h-8 w-8" />
-          </div>
-          <h2 className="text-2xl font-bold text-center mb-6">ساعات العمل</h2>
-          <div className="space-y-3 text-center">
-            <p className="text-gray-700 text-lg">
-              <span className="font-semibold">السبت - الخميس:</span> 9:00 صباحاً - 6:00 مساءً
-            </p>
-            <p className="text-gray-700 text-lg">
-              <span className="font-semibold">الجمعة:</span> 9:00 صباحاً - 6:00 مساءً
-            </p>
-            <p className="text-blue-700 font-semibold mt-4">
-              متاح 7 أيام في الأسبوع
-            </p>
           </div>
         </div>
       </div>
