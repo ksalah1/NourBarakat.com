@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { services } from '../data/services';
 import { FaCheckCircle } from 'react-icons/fa';
+import { CTAButtons } from '../components/CTAButtons';
 
 const Services: React.FC = () => {
     const location = useLocation();
@@ -58,6 +59,15 @@ const Services: React.FC = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* CTA Section */}
+                <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-12 text-center text-white shadow-2xl">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">جاهز للبدء؟</h2>
+                    <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-blue-100">
+                        احصل على استشارة قانونية مجانية اليوم ودعنا نساعدك في حل قضيتك القانونية
+                    </p>
+                    <CTAButtons layout="horizontal" showAll={false} />
                 </div>
             </div>
         </div>
