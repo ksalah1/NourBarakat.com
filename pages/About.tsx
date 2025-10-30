@@ -1,10 +1,17 @@
 
 import React from 'react';
 import { FaGavel, FaHandshake, FaBalanceScale } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const About: React.FC = () => {
   return (
     <div className="bg-white py-16">
+      <SEO
+        title="عن المكتب"
+        description="تعرف على مكتب نور بركات للمحاماة - فريق قانوني متخصص يقدم خدمات احترافية في الأردن مع التزام بالنزاهة، التركيز على العميل، والخبرة المهنية العالية."
+        keywords="عن نور بركات، محامي محترف، مكتب محاماة موثوق، خبرة قانونية، محامي الأردن"
+        canonicalUrl="https://ksalah1.github.io/NourBarakat.com/#/about"
+      />
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">

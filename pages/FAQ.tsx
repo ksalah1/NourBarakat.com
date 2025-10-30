@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { faqItems } from '../data/faq';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const FAQItemComponent: React.FC<{ item: typeof faqItems[0]; isOpen: boolean; onClick: () => void }> = ({ item, isOpen, onClick }) => {
   return (
@@ -33,6 +34,12 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="bg-white py-12">
+      <SEO
+        title="أسئلة شائعة"
+        description="إجابات على الأسئلة الشائعة حول خدمات مكتب نور بركات للمحاماة. تعرف على رسوم الاستشارة، مدة القضايا، السرية، والخدمات المتاحة للأفراد والشركات."
+        keywords="أسئلة قانونية، استشارات قانونية، رسوم المحامي، مدة القضايا، خدمات قانونية"
+        canonicalUrl="https://ksalah1.github.io/NourBarakat.com/#/faq"
+      />
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">أسئلة شائعة</h1>

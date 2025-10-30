@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -57,6 +58,12 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-gray-50 py-12">
+      <SEO
+        title="تواصل معنا"
+        description="تواصل مع مكتب نور بركات للمحاماة في عمان، الأردن. اتصل بنا على +962 79 926 2786 أو عبر واتساب. نقدم استشارات قانونية مجانية. عنواننا: ابو نصير - بنايه ٧١."
+        keywords="اتصل بنا، محامي عمان، استشارة قانونية، مكتب محاماة ابو نصير، رقم محامي الأردن"
+        canonicalUrl="https://ksalah1.github.io/NourBarakat.com/#/contact"
+      />
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">تواصل معنا</h1>
