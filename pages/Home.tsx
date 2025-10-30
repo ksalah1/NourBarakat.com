@@ -3,23 +3,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { services } from '../data/services';
 import { FaArrowLeft } from 'react-icons/fa';
+import { CTAButtons } from '../components/CTAButtons';
 
 const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-blue-800 text-white">
-        <div className="container mx-auto px-6 py-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">مكتب نور بركات للمحاماة</h1>
-          <p className="text-lg md:text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
-            نقدم لكم الدعم القانوني الاحترافي لحماية حقوقكم وتحقيق مصالحكم في الأردن.
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
+        <div className="container mx-auto px-6 py-24 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">مكتب نور بركات للمحاماة</h1>
+          <p className="text-lg md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
+            نقدم لكم الدعم القانوني الاحترافي لحماية حقوقكم وتحقيق مصالحكم في الأردن
           </p>
-          <Link
-            to="/contact"
-            className="bg-white text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300 text-lg"
-          >
-            اطلب استشارة قانونية
-          </Link>
+          <p className="text-md md:text-lg text-blue-200 mb-10 max-w-2xl mx-auto">
+            ✓ استشارة قانونية مجانية &nbsp;&nbsp; ✓ خبرة واسعة &nbsp;&nbsp; ✓ متاح 7 أيام في الأسبوع
+          </p>
+          <CTAButtons layout="horizontal" showAll={false} />
         </div>
       </section>
 
@@ -48,13 +47,16 @@ const Home: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-white py-16">
+      <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-20">
         <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">هل لديك قضية قانونية؟</h2>
-            <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">لا تتردد في التواصل معنا. نحن هنا لنستمع إليك ونقدم لك أفضل الحلول القانونية الممكنة.</p>
-            <Link to="/contact" className="bg-blue-800 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-900 transition duration-300 text-lg">
-                تواصل معنا الآن
-            </Link>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">هل لديك قضية قانونية؟</h2>
+            <p className="text-gray-700 text-lg md:text-xl mb-4 max-w-3xl mx-auto font-medium">
+              لا تتردد في التواصل معنا. نحن هنا لنستمع إليك ونقدم لك أفضل الحلول القانونية الممكنة.
+            </p>
+            <p className="text-gray-600 text-md mb-10 max-w-2xl mx-auto">
+              احصل على استشارة قانونية مجانية الآن واتخذ الخطوة الأولى لحماية حقوقك
+            </p>
+            <CTAButtons layout="horizontal" showAll={true} className="max-w-4xl mx-auto" />
         </div>
       </section>
     </div>
