@@ -130,8 +130,9 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={service.id}
+                to={`/services/${service.id}`}
                 className="group bg-white border border-gray-200 hover:border-blue-400 rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <div className="flex items-center justify-center h-16 w-16 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 text-white mb-6 mx-auto transition-transform duration-300">
@@ -139,15 +140,11 @@ const Home: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-center mb-4 text-gray-900">{service.title}</h3>
                 <p className="text-gray-600 text-center mb-6 leading-relaxed text-sm">{service.summary}</p>
-                <Link
-                  to="/services"
-                  state={{ focusId: service.id }}
-                  className="text-sm font-medium text-blue-700 hover:text-blue-900 flex items-center justify-center gap-2 transition-all"
-                >
+                <div className="text-sm font-medium text-blue-700 group-hover:text-blue-900 flex items-center justify-center gap-2 transition-all">
                   المزيد
                   <FaArrowLeft className="text-xs" />
-                </Link>
-              </div>
+                </div>
+              </Link>
             ))}
           </div>
 
