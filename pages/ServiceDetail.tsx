@@ -97,7 +97,7 @@ const ServiceDetail: React.FC = () => {
               تواصل معنا الآن للحصول على استشارة قانونية متخصصة وتقييم دقيق لحالتك
             </p>
             <a
-              href="https://wa.me/962799262786?text=مرحباً، أود الاستفسار عن خدمة: {service.title}"
+              href={`https://wa.me/962799262786?text=مرحباً، أود الاستفسار عن خدمة: ${service.title}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-white text-blue-900 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition duration-300"

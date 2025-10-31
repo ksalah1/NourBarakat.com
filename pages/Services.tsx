@@ -1,24 +1,11 @@
 
-import React, { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { services } from '../data/services';
-import { FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
+import { FaArrowLeft, FaWhatsapp } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 const Services: React.FC = () => {
-    const location = useLocation();
-    const { focusId } = (location.state as { focusId?: string }) || {};
-    const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-    useEffect(() => {
-        if (focusId) {
-            const index = services.findIndex(s => s.id === focusId);
-            if (index !== -1 && serviceRefs.current[index]) {
-                serviceRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    }, [focusId]);
-
     return (
         <div className="bg-gray-50">
             <SEO
@@ -40,53 +27,38 @@ const Services: React.FC = () => {
                 </div>
             </div>
 
-            {/* Services List */}
+            {/* Services Grid */}
             <div className="container mx-auto px-6 py-16">
-                <div className="max-w-5xl mx-auto space-y-8">
-                    {services.map((service, index) => (
-                        <div
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {services.map((service) => (
+                        <Link
                             key={service.id}
-                            ref={el => serviceRefs.current[index] = el}
-                            className="scroll-mt-24 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                            to={`/services/${service.id}`}
+                            className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col"
                         >
-                            {/* Service Header */}
-                            <div className="p-6 md:p-8 border-b border-gray-100">
-                                <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
-                                        <service.icon className="h-6 w-6 text-white" />
-                                    </div>
-                                    <div className="flex-1">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                                            {service.title}
-                                        </h2>
-                                        <p className="text-gray-600">
-                                            {service.summary}
-                                        </p>
-                                    </div>
+                            {/* Service Icon & Title */}
+                            <div className="p-6 border-b border-gray-100">
+                                <div className="flex items-center justify-center h-16 w-16 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 mx-auto mb-4">
+                                    <service.icon className="h-8 w-8 text-white" />
                                 </div>
+                                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-2">
+                                    {service.title}
+                                </h2>
                             </div>
 
-                            {/* Service Details */}
-                            <div className="p-6 md:p-8">
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    {service.details.map((detail, detailIndex) => (
-                                        <div key={detailIndex}>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-3">
-                                                {detail.title}
-                                            </h3>
-                                            <ul className="space-y-2">
-                                                {detail.points.slice(0, 3).map((point, pointIndex) => (
-                                                    <li key={pointIndex} className="flex items-start text-sm">
-                                                        <FaCheckCircle className="text-blue-600 h-4 w-4 mt-0.5 me-2 flex-shrink-0" />
-                                                        <span className="text-gray-700">{point}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    ))}
+                            {/* Service Summary */}
+                            <div className="p-6 flex-grow flex flex-col">
+                                <p className="text-gray-600 leading-relaxed text-center mb-6 flex-grow">
+                                    {service.summary}
+                                </p>
+
+                                {/* Learn More Link */}
+                                <div className="flex items-center justify-center text-blue-600 font-medium">
+                                    <span className="text-sm">المزيد من التفاصيل</span>
+                                    <FaArrowLeft className="mr-2 text-xs" />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
