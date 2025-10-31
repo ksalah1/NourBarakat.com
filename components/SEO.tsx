@@ -24,7 +24,7 @@ const SEO: React.FC<SEOProps> = ({
   ogImage = 'https://nourbarakat.com/og-image.jpg',
   article
 }) => {
-  const siteName = 'مكتب نور بركات للمحاماة';
+  const siteName = 'المحامية نور بركات';
   const fullTitle = `${title} | ${siteName}`;
   const baseUrl = 'https://nourbarakat.com';
   const currentUrl = canonicalUrl || baseUrl;

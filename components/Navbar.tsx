@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     { name: 'الرئيسية', path: '/' },
     { name: 'خدماتنا', path: '/services' },
     { name: 'مقالات قانونية', path: '/articles' },
-    { name: 'عن المكتب', path: '/about' },
+    { name: 'من نحن', path: '/about' },
     { name: 'أسئلة شائعة', path: '/faq' },
     { name: 'تواصل معنا', path: '/contact' },
   ];
