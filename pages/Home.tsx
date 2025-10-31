@@ -12,8 +12,8 @@ const Home: React.FC = () => {
     <div>
       <SEO
         title="الصفحة الرئيسية"
-        description="مكتب نور بركات للمحاماة في الأردن - خدمات قانونية احترافية متخصصة في قضايا التأمين، تحصيل الديون، مراجعة العقود، قانون العمل، وقضايا الإيجار. استشارة قانونية مجانية."
-        keywords="محامي الأردن، مكتب محاماة عمان، قضايا تأمين، تحصيل ديون، عقود، قانون عمل، قضايا إيجار، نور بركات، محامي عمان"
+        description="المحامية نور بركات في الأردن - خدمات قانونية احترافية متخصصة في قضايا التأمين، تحصيل الديون، مراجعة العقود، قانون العمل، وقضايا الإيجار. استشارة قانونية مجانية. +14 عاماً من الخبرة."
+        keywords="محامية الأردن، نور بركات، محامية عمان، قضايا تأمين، تحصيل ديون، عقود، قانون عمل، قضايا إيجار، محامية متخصصة، خدمات قانونية"
         canonicalUrl="https://nourbarakat.com/"
       />
       <LocalBusinessSchema />
@@ -22,9 +22,9 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
         <div className="container mx-auto px-6 py-24 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">مكتب نور بركات للمحاماة</h1>
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">المحامية نور بركات</h1>
           <p className="text-lg md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
-            نقدم لكم الدعم القانوني الاحترافي لحماية حقوقكم وتحقيق مصالحكم في الأردن
+            خدمات قانونية احترافية لحماية حقوقكم وتحقيق مصالحكم في الأردن
           </p>
           <p className="text-md md:text-lg text-blue-200 mb-10 max-w-2xl mx-auto">
             ✓ استشارة قانونية مجانية &nbsp;&nbsp; ✓ خبرة واسعة &nbsp;&nbsp; ✓ متاح 7 أيام في الأسبوع

@@ -33,7 +33,7 @@ const Services: React.FC = () => {
         <div className="bg-gray-50">
             <SEO
                 title="خدماتنا القانونية"
-                description="خدمات قانونية شاملة من مكتب نور بركات: قضايا التأمين، تحصيل الديون، مراجعة العقود، النزاعات العمالية، وقضايا الإيجار. خبرة واحترافية في خدمة الأفراد والشركات."
+                description="خدمات قانونية شاملة من المحامية نور بركات: قضايا التأمين، تحصيل الديون، مراجعة العقود، النزاعات العمالية، وقضايا الإيجار. خبرة +14 عاماً في خدمة الأفراد والشركات."
                 keywords="خدمات قانونية الأردن، محامي تأمين، تحصيل ديون، مراجعة عقود، قانون عمل، قضايا إيجار، استشارات قانونية"
                 canonicalUrl="https://nourbarakat.com/#/services"
             />
@@ -161,7 +161,7 @@ const Services: React.FC = () => {
                 {/* Why Choose Us Section */}
                 <div className="mt-16 md:mt-20 bg-white rounded-3xl shadow-xl p-8 md:p-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">
-                        لماذا تختار مكتب نور بركات للمحاماة؟
+                        لماذا تختار المحامية نور بركات؟
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="text-center">

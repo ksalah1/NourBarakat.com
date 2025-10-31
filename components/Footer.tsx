@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <span className="self-center text-2xl font-semibold whitespace-nowrap">نور بركات</span>
             </Link>
             <p className="text-gray-400">
-              مكتب محاماة متخصص في تقديم استشارات وخدمات قانونية موثوقة في الأردن.
+              محامية متخصصة في تقديم استشارات وخدمات قانونية موثوقة في الأردن.
             </p>
           </div>
           <div>
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             <ul>
               <li className="mb-2"><Link to="/services" className="hover:text-blue-400">خدماتنا</Link></li>
               <li className="mb-2"><Link to="/articles" className="hover:text-blue-400">مقالات قانونية</Link></li>
-              <li className="mb-2"><Link to="/about" className="hover:text-blue-400">عن المكتب</Link></li>
+              <li className="mb-2"><Link to="/about" className="hover:text-blue-400">من نحن</Link></li>
               <li className="mb-2"><Link to="/faq" className="hover:text-blue-400">أسئلة شائعة</Link></li>
             </ul>
           </div>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} مكتب نور بركات للمحاماة. جميع الحقوق محفوظة.</p>
+          <p>&copy; {new Date().getFullYear()} المحامية نور بركات. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>

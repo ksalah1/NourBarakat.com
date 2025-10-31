@@ -6,7 +6,7 @@ export const LocalBusinessSchema: React.FC = () => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    "name": "مكتب نور بركات للمحاماة",
+    "name": "المحامية نور بركات",
     "image": "https://nourbarakat.com/og-image.jpg",
     "url": "https://nourbarakat.com",
     "telephone": "+962799262786",
@@ -129,7 +129,7 @@ export const ArticleSchema: React.FC<ArticleSchemaProps> = ({
     },
     "publisher": {
       "@type": "Organization",
-      "name": "مكتب نور بركات للمحاماة",
+      "name": "المحامية نور بركات",
       "logo": {
         "@type": "ImageObject",
         "url": "https://nourbarakat.com/logo.png"
