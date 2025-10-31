@@ -76,7 +76,7 @@ const ArticleDetail: React.FC = () => {
   return (
     <div className="bg-gray-50">
       {/* Article Header with gradient */}
-      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16">
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 md:py-24">
         <div className="container mx-auto px-6 max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">{article.title}</h1>
           <div className="flex items-center text-md text-blue-100 gap-6">

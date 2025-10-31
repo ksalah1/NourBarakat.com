@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { FaGavel, FaHandshake, FaBalanceScale, FaGraduationCap, FaBriefcase, FaCertificate, FaUsers, FaAward, FaHome, FaChevronLeft, FaCheckCircle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaGavel, FaHandshake, FaBalanceScale, FaGraduationCap, FaBriefcase, FaCertificate, FaUsers, FaAward, FaCheckCircle } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 const About: React.FC = () => {
@@ -60,44 +59,14 @@ const About: React.FC = () => {
         canonicalUrl="https://nourbarakat.com/about"
       />
 
-      {/* Breadcrumb Navigation */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-6 py-3">
-          <nav className="flex items-center gap-2 text-sm text-gray-600">
-            <Link to="/" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-              <FaHome className="text-base" />
-              <span>الرئيسية</span>
-            </Link>
-            <FaChevronLeft className="text-xs text-gray-400" />
-            <span className="text-blue-600 font-semibold">عن المحامية</span>
-          </nav>
-        </div>
-      </div>
-
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 md:py-28">
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">المحامية نور بركات</h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-              أكثر من 14 عاماً من الخبرة في قانون التأمين والقضايا المدنية
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">عن المحامية</h1>
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+              أكثر من 14 عاماً من الخبرة القانونية المتخصصة في قانون التأمين والقضايا المدنية
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 flex items-center gap-2">
-                <FaAward className="text-yellow-400 text-2xl" />
-                <div className="text-right">
-                  <div className="text-sm text-blue-200">نقابة المحامين الأردنيين</div>
-                  <div className="text-lg font-bold">رقم التسجيل: 16872</div>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 flex items-center gap-2">
-                <FaBriefcase className="text-green-400 text-2xl" />
-                <div className="text-right">
-                  <div className="text-sm text-blue-200">الخبرة المهنية</div>
-                  <div className="text-lg font-bold">+14 عاماً</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -33,9 +33,9 @@ const ArticleList: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 md:py-24">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">المقالات القانونية</h1>
-            <p className="text-lg text-blue-100 leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
               مقالات ونصائح قانونية متخصصة في القانون الأردني
             </p>
           </div>

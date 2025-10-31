@@ -5,20 +5,27 @@ import SEO from '../components/SEO';
 const Contact: React.FC = () => {
 
   return (
-    <div className="bg-gray-50 py-12">
+    <div className="bg-gray-50">
       <SEO
         title="تواصل معنا"
         description="تواصل مع المحامية نور بركات في عمان، الأردن. اتصل بنا على +962 79 926 2786 أو عبر واتساب. نقدم استشارات قانونية مجانية. عنواننا: ابو نصير - بنايه ٧١."
         keywords="اتصل بنا، محامية عمان، استشارة قانونية، نور بركات، محامية ابو نصير، رقم محامية الأردن"
         canonicalUrl="https://nourbarakat.com/contact"
       />
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">تواصل معنا</h1>
-          <p className="text-gray-600 mt-4 text-lg max-w-3xl mx-auto">
-            نحن هنا للإجابة على استفساراتك. تواصل معنا مباشرة عبر الهاتف أو واتساب.
-          </p>
+
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 md:py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">تواصل معنا</h1>
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+              نحن هنا للإجابة على استفساراتك القانونية
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-6 py-12">
 
         {/* Contact Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
