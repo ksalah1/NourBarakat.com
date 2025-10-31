@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { services } from '../data/services';
 import { articles } from '../data/articles';
-import { FaArrowLeft, FaAward, FaBriefcase, FaUsers, FaCheckCircle, FaBalanceScale, FaShieldAlt, FaClock, FaHandshake, FaGavel, FaFileAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaAward, FaBriefcase, FaUsers, FaCheckCircle, FaBalanceScale, FaShieldAlt, FaClock, FaHandshake, FaGavel, FaFileAlt, FaWhatsapp } from 'react-icons/fa';
 import { CTAButtons } from '../components/CTAButtons';
 import SEO from '../components/SEO';
 import { LocalBusinessSchema, AttorneySchema } from '../components/StructuredData';
@@ -11,9 +11,9 @@ import { LocalBusinessSchema, AttorneySchema } from '../components/StructuredDat
 const Home: React.FC = () => {
   const stats = [
     { icon: FaBriefcase, value: '14+', label: 'عاماً من الخبرة', color: 'blue' },
-    { icon: FaGavel, value: '500+', label: 'قضية ناجحة', color: 'green' },
-    { icon: FaUsers, value: '100%', label: 'رضا العملاء', color: 'purple' },
     { icon: FaAward, value: '16872', label: 'رقم التسجيل بالنقابة', color: 'yellow' },
+    { icon: FaBalanceScale, value: 'بكالوريوس', label: 'قانون - جيد جداً', color: 'purple' },
+    { icon: FaGavel, value: 'ماجستير', label: 'قانون - قيد الإنجاز', color: 'green' },
   ];
 
   const whyChoose = [
@@ -29,28 +29,28 @@ const Home: React.FC = () => {
     },
     {
       icon: FaHandshake,
-      title: 'استشارة مجانية',
-      description: 'نقدم استشارة قانونية مجانية لتقييم قضيتك وتقديم أفضل الحلول القانونية',
+      title: 'التزام ومصداقية',
+      description: 'نلتزم بأعلى معايير الأخلاقيات المهنية ونحافظ على السرية التامة لمعلومات العملاء',
     },
     {
       icon: FaClock,
-      title: 'متاحة دائماً',
-      description: 'نستقبل استفساراتكم 7 أيام في الأسبوع عبر الهاتف أو واتساب للرد السريع',
+      title: 'تواصل فعال',
+      description: 'نستقبل استفساراتكم عبر الهاتف أو واتساب ونسعى للرد في أقرب وقت ممكن',
     },
   ];
 
   const process = [
     { step: '1', title: 'تواصل معنا', description: 'اتصل بنا عبر الهاتف أو واتساب' },
-    { step: '2', title: 'استشارة مجانية', description: 'احصل على تقييم أولي لقضيتك' },
-    { step: '3', title: 'خطة قانونية', description: 'نضع استراتيجية قانونية واضحة' },
-    { step: '4', title: 'تنفيذ ومتابعة', description: 'نتابع قضيتك حتى تحقيق النتائج' },
+    { step: '2', title: 'استشارة أولية', description: 'نستمع لتفاصيل قضيتك ونفهم احتياجاتك القانونية' },
+    { step: '3', title: 'خطة قانونية', description: 'نضع استراتيجية قانونية واضحة ومناسبة' },
+    { step: '4', title: 'تنفيذ ومتابعة', description: 'نعمل على قضيتك بكل احترافية ونتابعها بدقة' },
   ];
 
   return (
     <div>
       <SEO
         title="الصفحة الرئيسية"
-        description="المحامية نور بركات في الأردن - خدمات قانونية احترافية متخصصة في قضايا التأمين، تحصيل الديون، مراجعة العقود، قانون العمل، وقضايا الإيجار. استشارة قانونية مجانية. +14 عاماً من الخبرة."
+        description="المحامية نور بركات في الأردن - خدمات قانونية احترافية متخصصة في قضايا التأمين، تحصيل الديون، مراجعة العقود، قانون العمل، وقضايا الإيجار. +14 عاماً من الخبرة القانونية."
         keywords="محامية الأردن، نور بركات، محامية عمان، قضايا تأمين، تحصيل ديون، عقود، قانون عمل، قضايا إيجار، محامية متخصصة، خدمات قانونية"
         canonicalUrl="https://nourbarakat.com/"
       />
@@ -91,22 +91,22 @@ const Home: React.FC = () => {
               </p>
               <p className="text-lg md:text-xl text-blue-200 mb-10 max-w-3xl mx-auto leading-relaxed">
                 أحمي حقوقك القانونية مع محامية ذات خبرة +14 عاماً في أكبر شركات التأمين في الأردن.
-                استشارة قانونية مجانية لتقييم قضيتك.
+                نعمل بكل احترافية والتزام لخدمة مصالحكم القانونية.
               </p>
 
               {/* Key Benefits */}
               <div className="flex flex-wrap justify-center gap-6 mb-10">
                 <div className="flex items-center gap-2">
                   <FaCheckCircle className="text-green-400 text-xl" />
-                  <span className="text-lg">استشارة مجانية</span>
+                  <span className="text-lg">خبرة +14 عاماً</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <FaCheckCircle className="text-green-400 text-xl" />
-                  <span className="text-lg">رد سريع 24/7</span>
+                  <span className="text-lg">التزام مهني عالٍ</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <FaCheckCircle className="text-green-400 text-xl" />
-                  <span className="text-lg">نتائج مضمونة</span>
+                  <span className="text-lg">سرية تامة</span>
                 </div>
               </div>
 
@@ -306,21 +306,21 @@ const Home: React.FC = () => {
               لا تترك حقوقك القانونية للصدفة
             </p>
             <p className="text-lg text-blue-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-              احصل على استشارة قانونية مجانية الآن من محامية متخصصة مع +14 عاماً من الخبرة.
-              نحن هنا لمساعدتك في حماية حقوقك وتحقيق العدالة.
+              تواصل الآن مع محامية متخصصة مع +14 عاماً من الخبرة القانونية.
+              نحن هنا لمساعدتك في حماية حقوقك والعمل على قضيتك بكل احترافية.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-10">
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <FaClock className="text-4xl text-yellow-400 mx-auto mb-3" />
-                  <div className="font-bold text-lg">رد فوري</div>
-                  <div className="text-blue-200 text-sm">خلال ساعات قليلة</div>
+                  <FaBriefcase className="text-4xl text-yellow-400 mx-auto mb-3" />
+                  <div className="font-bold text-lg">خبرة واسعة</div>
+                  <div className="text-blue-200 text-sm">+14 عاماً في القانون</div>
                 </div>
                 <div>
                   <FaBalanceScale className="text-4xl text-green-400 mx-auto mb-3" />
-                  <div className="font-bold text-lg">استشارة مجانية</div>
-                  <div className="text-blue-200 text-sm">تقييم كامل لقضيتك</div>
+                  <div className="font-bold text-lg">التزام مهني</div>
+                  <div className="text-blue-200 text-sm">أعلى معايير الاحترافية</div>
                 </div>
                 <div>
                   <FaShieldAlt className="text-4xl text-blue-300 mx-auto mb-3" />
@@ -330,10 +330,20 @@ const Home: React.FC = () => {
               </div>
             </div>
 
-            <CTAButtons layout="horizontal" showAll={true} className="max-w-4xl mx-auto" />
+            <div className="flex justify-center">
+              <a
+                href="https://wa.me/962799262786?text=مرحباً، أود الاستفسار عن خدماتكم القانونية"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center bg-green-500 text-white font-bold py-4 px-8 rounded-full hover:bg-green-600 transition duration-300 text-xl shadow-lg hover:shadow-xl"
+              >
+                <FaWhatsapp className="me-3 text-2xl" />
+                تواصل عبر واتساب
+              </a>
+            </div>
 
             <p className="text-blue-200 mt-6 text-sm">
-              💼 عضو نقابة المحامين الأردنيين | 📞 متاح 7 أيام في الأسبوع
+              💼 عضو نقابة المحامين الأردنيين #16872
             </p>
           </div>
         </div>
