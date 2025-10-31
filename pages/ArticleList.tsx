@@ -85,7 +85,7 @@ const ArticleList: React.FC = () => {
         title="مقالات قانونية"
         description="مقالات قانونية شاملة من المحامية نور بركات: التأمين، تحصيل الديون، قانون العمل، العقود، والإيجار. رؤى قانونية متخصصة في القانون الأردني."
         keywords="مقالات قانونية، قانون أردني، استشارات قانونية، نصائح قانونية، تأمين المركبات، تحصيل ديون، قانون عمل"
-        canonicalUrl="https://nourbarakat.com/#/articles"
+        canonicalUrl="https://nourbarakat.com/articles"
       />
 
       {/* Breadcrumb Navigation */}

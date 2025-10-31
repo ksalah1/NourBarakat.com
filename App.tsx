@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -15,7 +15,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
         <Navbar />
@@ -33,7 +33,7 @@ function App() {
         <Footer />
         <FloatingWhatsApp />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
