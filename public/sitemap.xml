@@ -12,7 +12,7 @@
 
   <!-- Services Page -->
   <url>
-    <loc>https://nourbarakat.com/#/services</loc>
+    <loc>https://nourbarakat.com/services</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -20,7 +20,7 @@
 
   <!-- Articles Page -->
   <url>
-    <loc>https://nourbarakat.com/#/articles</loc>
+    <loc>https://nourbarakat.com/articles</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -28,7 +28,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://nourbarakat.com/#/about</loc>
+    <loc>https://nourbarakat.com/about</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -36,7 +36,7 @@
 
   <!-- FAQ Page -->
   <url>
-    <loc>https://nourbarakat.com/#/faq</loc>
+    <loc>https://nourbarakat.com/faq</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -44,7 +44,7 @@
 
   <!-- Contact Page -->
   <url>
-    <loc>https://nourbarakat.com/#/contact</loc>
+    <loc>https://nourbarakat.com/contact</loc>
     <lastmod>2025-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -52,70 +52,70 @@
 
   <!-- Individual Articles -->
   <url>
-    <loc>https://nourbarakat.com/#/articles/1</loc>
+    <loc>https://nourbarakat.com/articles/1</loc>
     <lastmod>2024-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/2</loc>
+    <loc>https://nourbarakat.com/articles/2</loc>
     <lastmod>2024-08-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/3</loc>
+    <loc>https://nourbarakat.com/articles/3</loc>
     <lastmod>2024-08-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/4</loc>
+    <loc>https://nourbarakat.com/articles/4</loc>
     <lastmod>2024-08-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/5</loc>
+    <loc>https://nourbarakat.com/articles/5</loc>
     <lastmod>2024-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/6</loc>
+    <loc>https://nourbarakat.com/articles/6</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/7</loc>
+    <loc>https://nourbarakat.com/articles/7</loc>
     <lastmod>2024-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/8</loc>
+    <loc>https://nourbarakat.com/articles/8</loc>
     <lastmod>2024-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/9</loc>
+    <loc>https://nourbarakat.com/articles/9</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nourbarakat.com/#/articles/10</loc>
+    <loc>https://nourbarakat.com/articles/10</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

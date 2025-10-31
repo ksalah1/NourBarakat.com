@@ -64,7 +64,7 @@ const FAQ: React.FC = () => {
         title="أسئلة شائعة"
         description="إجابات شاملة على الأسئلة الشائعة حول خدمات المحامية نور بركات في الأردن: التأمين، تحصيل الديون، العقود، قانون العمل، والإيجار. احصل على إجابات واضحة لأسئلتك القانونية."
         keywords="أسئلة قانونية الأردن، استشارات قانونية، رسوم المحامي، مدة القضايا، قانون العمل، تحصيل ديون، مراجعة عقود، قضايا إيجار"
-        canonicalUrl="https://nourbarakat.com/#/faq"
+        canonicalUrl="https://nourbarakat.com/faq"
       />
       <div className="container mx-auto px-6 max-w-5xl">
         {/* Header */}

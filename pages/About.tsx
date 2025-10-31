@@ -57,7 +57,7 @@ const About: React.FC = () => {
         title="عن المحامية"
         description="المحامية نور بركات - أكثر من 14 عاماً من الخبرة في قانون التأمين والقضايا المدنية. عضو نقابة المحامين الأردنيين رقم 16872. حاصلة على بكالوريوس القانون وتتابع درجة الماجستير."
         keywords="نور بركات، محامية أردنية، خبيرة تأمين، قانون الأردن، نقابة المحامين، محامية متخصصة"
-        canonicalUrl="https://nourbarakat.com/#/about"
+        canonicalUrl="https://nourbarakat.com/about"
       />
 
       {/* Breadcrumb Navigation */}
