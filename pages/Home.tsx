@@ -9,14 +9,7 @@ import SEO from '../components/SEO';
 import { LocalBusinessSchema, AttorneySchema } from '../components/StructuredData';
 
 const Home: React.FC = () => {
-  const stats = [
-    { icon: FaBriefcase, value: '14+', label: 'عاماً من الخبرة', color: 'blue' },
-    { icon: FaAward, value: '16872', label: 'رقم التسجيل بالنقابة', color: 'yellow' },
-    { icon: FaBalanceScale, value: 'بكالوريوس', label: 'قانون - جيد جداً', color: 'purple' },
-    { icon: FaGavel, value: 'ماجستير', label: 'قانون - قيد الإنجاز', color: 'green' },
-  ];
-
-  const whyChoose = [
+  const expertise = [
     {
       icon: FaShieldAlt,
       title: 'خبرة متخصصة',
@@ -89,26 +82,9 @@ const Home: React.FC = () => {
               <p className="text-xl md:text-3xl text-blue-100 mb-6 font-semibold">
                 خبيرة قانونية متخصصة في قضايا التأمين والقانون المدني
               </p>
-              <p className="text-lg md:text-xl text-blue-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-                أحمي حقوقك القانونية مع محامية ذات خبرة +14 عاماً في أكبر شركات التأمين في الأردن.
-                نعمل بكل احترافية والتزام لخدمة مصالحكم القانونية.
+              <p className="text-lg md:text-xl text-blue-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+                خبرة قانونية متخصصة في قضايا التأمين والقانون المدني، مع التزام تام بالمعايير المهنية والأخلاقية.
               </p>
-
-              {/* Key Benefits */}
-              <div className="flex flex-wrap justify-center gap-6 mb-10">
-                <div className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xl" />
-                  <span className="text-lg">خبرة +14 عاماً</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xl" />
-                  <span className="text-lg">التزام مهني عالٍ</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xl" />
-                  <span className="text-lg">سرية تامة</span>
-                </div>
-              </div>
 
               <CTAButtons layout="horizontal" showAll={false} />
             </div>
@@ -116,58 +92,39 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white border-y border-gray-200">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-${stat.color}-100 mb-4`}>
-                  <stat.icon className={`text-3xl text-${stat.color}-600`} />
-                </div>
-                <div className={`text-4xl md:text-5xl font-bold text-${stat.color}-600 mb-2`}>
-                  {stat.value}
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Section */}
+      {/* Expertise Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              لماذا تختار المحامية نور بركات؟
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              مجالات الخبرة
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              خبرة قانونية متميزة مع التزام تام بحماية حقوقك وتحقيق أفضل النتائج
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              خدمات قانونية متخصصة بخبرة تمتد لأكثر من أربعة عشر عاماً
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {whyChoose.map((item, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-700 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <item.icon className="text-white text-3xl" />
+            {expertise.map((item, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                  <item.icon className="text-white text-2xl" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section - Enhanced */}
+      {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">خدماتنا القانونية</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              خدمات قانونية شاملة ومتخصصة لحماية حقوقك في جميع المجالات
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">الخدمات القانونية</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              خدمات قانونية شاملة ومتخصصة في مختلف المجالات
             </p>
           </div>
 
@@ -175,20 +132,20 @@ const Home: React.FC = () => {
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className="group bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-blue-500 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white border border-gray-200 hover:border-blue-400 rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300"
               >
-                <div className="flex items-center justify-center h-20 w-20 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 text-white mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="h-10 w-10" />
+                <div className="flex items-center justify-center h-16 w-16 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 text-white mb-6 mx-auto transition-transform duration-300">
+                  <service.icon className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-bold text-center mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 text-center mb-6 leading-relaxed">{service.summary}</p>
+                <h3 className="text-xl font-bold text-center mb-4 text-gray-900">{service.title}</h3>
+                <p className="text-gray-600 text-center mb-6 leading-relaxed text-sm">{service.summary}</p>
                 <Link
                   to="/services"
                   state={{ focusId: service.id }}
-                  className="font-semibold text-blue-700 hover:text-blue-900 flex items-center justify-center group-hover:gap-3 gap-2 transition-all"
+                  className="text-sm font-medium text-blue-700 hover:text-blue-900 flex items-center justify-center gap-2 transition-all"
                 >
-                  اقرأ المزيد
-                  <FaArrowLeft className="transition-transform group-hover:-translate-x-1" />
+                  المزيد
+                  <FaArrowLeft className="text-xs" />
                 </Link>
               </div>
             ))}
@@ -197,22 +154,22 @@ const Home: React.FC = () => {
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl transition duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-lg transition duration-300"
             >
-              عرض جميع الخدمات
+              جميع الخدمات
               <FaArrowLeft />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* How It Works - Process */}
+      {/* Process Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">كيف نعمل معك؟</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              عملية بسيطة وواضحة من الاستشارة الأولى حتى تحقيق النتائج
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">آلية العمل</h2>
+            <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+              منهجية واضحة ومنظمة من الاستشارة الأولى وحتى متابعة القضية
             </p>
           </div>
 
@@ -239,13 +196,13 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Recent Articles Section */}
+      {/* Articles Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">آخر المقالات القانونية</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              رؤى قانونية ونصائح متخصصة لمساعدتك على فهم حقوقك
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">المقالات القانونية</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              مقالات ورؤى قانونية متخصصة
             </p>
           </div>
 
@@ -286,64 +243,40 @@ const Home: React.FC = () => {
           <div className="text-center mt-12">
             <Link
               to="/articles"
-              className="inline-flex items-center gap-2 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold px-8 py-4 rounded-xl transition duration-300 shadow-lg"
+              className="inline-flex items-center gap-2 bg-white border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-medium px-8 py-3 rounded-lg transition duration-300"
             >
-              عرض جميع المقالات
+              جميع المقالات
               <FaArrowLeft />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* Contact Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              هل تحتاج إلى مساعدة قانونية؟
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              استشارة قانونية
             </h2>
-            <p className="text-xl md:text-2xl text-blue-100 mb-4">
-              لا تترك حقوقك القانونية للصدفة
-            </p>
-            <p className="text-lg text-blue-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-              تواصل الآن مع محامية متخصصة مع +14 عاماً من الخبرة القانونية.
-              نحن هنا لمساعدتك في حماية حقوقك والعمل على قضيتك بكل احترافية.
+            <p className="text-lg text-blue-100 mb-12 leading-relaxed">
+              للحصول على استشارة قانونية متخصصة، يمكنكم التواصل معنا
             </p>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-10">
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <FaBriefcase className="text-4xl text-yellow-400 mx-auto mb-3" />
-                  <div className="font-bold text-lg">خبرة واسعة</div>
-                  <div className="text-blue-200 text-sm">+14 عاماً في القانون</div>
-                </div>
-                <div>
-                  <FaBalanceScale className="text-4xl text-green-400 mx-auto mb-3" />
-                  <div className="font-bold text-lg">التزام مهني</div>
-                  <div className="text-blue-200 text-sm">أعلى معايير الاحترافية</div>
-                </div>
-                <div>
-                  <FaShieldAlt className="text-4xl text-blue-300 mx-auto mb-3" />
-                  <div className="font-bold text-lg">سرية تامة</div>
-                  <div className="text-blue-200 text-sm">حماية معلوماتك</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-8">
               <a
-                href="https://wa.me/962799262786?text=مرحباً، أود الاستفسار عن خدماتكم القانونية"
+                href="https://wa.me/962799262786?text=مرحباً، أود الاستفسار عن الخدمات القانونية"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center bg-green-500 text-white font-bold py-4 px-8 rounded-full hover:bg-green-600 transition duration-300 text-xl shadow-lg hover:shadow-xl"
+                className="flex items-center justify-center bg-white text-blue-900 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition duration-300"
               >
-                <FaWhatsapp className="me-3 text-2xl" />
+                <FaWhatsapp className="me-2 text-xl" />
                 تواصل عبر واتساب
               </a>
             </div>
 
-            <p className="text-blue-200 mt-6 text-sm">
-              💼 عضو نقابة المحامين الأردنيين #16872
+            <p className="text-blue-100 text-sm">
+              عضو نقابة المحامين الأردنيين - رقم التسجيل 16872
             </p>
           </div>
         </div>
