@@ -59,21 +59,27 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-12">
+    <div className="bg-gray-50">
       <SEO
         title="أسئلة شائعة"
         description="إجابات شاملة على الأسئلة الشائعة حول خدمات المحامية نور بركات في الأردن: التأمين، تحصيل الديون، العقود، قانون العمل، والإيجار. احصل على إجابات واضحة لأسئلتك القانونية."
         keywords="أسئلة قانونية الأردن، استشارات قانونية، رسوم المحامي، مدة القضايا، قانون العمل، تحصيل ديون، مراجعة عقود، قضايا إيجار"
         canonicalUrl="https://nourbarakat.com/faq"
       />
-      <div className="container mx-auto px-6 max-w-5xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">أسئلة شائعة</h1>
-          <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto">
-            إجابات مفصلة على الأسئلة الأكثر شيوعاً حول خدماتنا القانونية. إذا لم تجد إجابة لسؤالك، تواصل معنا مباشرة.
-          </p>
+
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 md:py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">أسئلة شائعة</h1>
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+              إجابات مفصلة على الأسئلة الأكثر شيوعاً حول خدماتنا القانونية
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-6 max-w-5xl py-12">
 
         {/* Categories */}
         <div className="space-y-8">
