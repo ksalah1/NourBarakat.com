@@ -25,15 +25,6 @@ export const CTAButtons: React.FC<CTAButtonsProps> = ({
 
   return (
     <div className={`${layoutClasses[layout]} ${className}`}>
-      {/* Book Free Consultation */}
-      <Link
-        to="/contact"
-        className="flex items-center justify-center bg-blue-700 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-800 transition duration-300 text-lg shadow-lg hover:shadow-xl"
-      >
-        <FaCalendarAlt className="me-2" />
-        احجز استشارة مجانية
-      </Link>
-
       {/* WhatsApp Contact */}
       <a
         href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`}
