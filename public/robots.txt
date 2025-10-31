@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://ksalah1.github.io/NourBarakat.com/sitemap.xml
+Sitemap: https://nourbarakat.com/sitemap.xml
 
 # Crawl-delay for courtesy
 Crawl-delay: 1

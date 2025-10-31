@@ -21,12 +21,12 @@ const SEO: React.FC<SEOProps> = ({
   keywords,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://ksalah1.github.io/NourBarakat.com/og-image.jpg',
+  ogImage = 'https://nourbarakat.com/og-image.jpg',
   article
 }) => {
   const siteName = 'مكتب نور بركات للمحاماة';
   const fullTitle = `${title} | ${siteName}`;
-  const baseUrl = 'https://ksalah1.github.io/NourBarakat.com';
+  const baseUrl = 'https://nourbarakat.com';
   const currentUrl = canonicalUrl || baseUrl;
 
   return (

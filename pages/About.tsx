@@ -10,7 +10,7 @@ const About: React.FC = () => {
         title="عن المكتب"
         description="تعرف على مكتب نور بركات للمحاماة - فريق قانوني متخصص يقدم خدمات احترافية في الأردن مع التزام بالنزاهة، التركيز على العميل، والخبرة المهنية العالية."
         keywords="عن نور بركات، محامي محترف، مكتب محاماة موثوق، خبرة قانونية، محامي الأردن"
-        canonicalUrl="https://ksalah1.github.io/NourBarakat.com/#/about"
+        canonicalUrl="https://nourbarakat.com/#/about"
       />
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12">

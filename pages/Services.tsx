@@ -35,7 +35,7 @@ const Services: React.FC = () => {
                 title="خدماتنا القانونية"
                 description="خدمات قانونية شاملة من مكتب نور بركات: قضايا التأمين، تحصيل الديون، مراجعة العقود، النزاعات العمالية، وقضايا الإيجار. خبرة واحترافية في خدمة الأفراد والشركات."
                 keywords="خدمات قانونية الأردن، محامي تأمين، تحصيل ديون، مراجعة عقود، قانون عمل، قضايا إيجار، استشارات قانونية"
-                canonicalUrl="https://ksalah1.github.io/NourBarakat.com/#/services"
+                canonicalUrl="https://nourbarakat.com/#/services"
             />
 
             {/* Hero Section */}
