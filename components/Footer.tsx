@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
                   className="text-slate-400 hover:text-white text-sm transition-colors"
                   dir="ltr"
                 >
-                  واتساب: +962 79 926 2786
+                  +962 79 926 2786
                 </a>
               </div>
             </div>
@@ -71,14 +71,9 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-500 text-sm text-center md:text-right">
-              &copy; {new Date().getFullYear()} المحامية نور بركات. جميع الحقوق محفوظة.
-            </p>
-            <p className="text-slate-600 text-xs text-center md:text-left">
-              تصميم وتطوير الموقع بأحدث التقنيات
-            </p>
-          </div>
+          <p className="text-slate-500 text-sm text-center">
+            &copy; {new Date().getFullYear()} المحامية نور بركات. جميع الحقوق محفوظة.
+          </p>
         </div>
       </div>
     </footer>
