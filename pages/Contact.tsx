@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
         title="تواصل معنا"
         description="تواصل مع مكتب نور بركات للمحاماة في عمان، الأردن. اتصل بنا على +962 79 926 2786 أو عبر واتساب. نقدم استشارات قانونية مجانية. عنواننا: ابو نصير - بنايه ٧١."
         keywords="اتصل بنا، محامي عمان، استشارة قانونية، مكتب محاماة ابو نصير، رقم محامي الأردن"
-        canonicalUrl="https://ksalah1.github.io/NourBarakat.com/#/contact"
+        canonicalUrl="https://nourbarakat.com/#/contact"
       />
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">

@@ -7,8 +7,8 @@ export const LocalBusinessSchema: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "مكتب نور بركات للمحاماة",
-    "image": "https://ksalah1.github.io/NourBarakat.com/og-image.jpg",
-    "url": "https://ksalah1.github.io/NourBarakat.com",
+    "image": "https://nourbarakat.com/og-image.jpg",
+    "url": "https://nourbarakat.com",
     "telephone": "+962799262786",
     "address": {
       "@type": "PostalAddress",
@@ -115,7 +115,7 @@ export const ArticleSchema: React.FC<ArticleSchemaProps> = ({
   publishedDate,
   modifiedDate,
   author,
-  image = "https://ksalah1.github.io/NourBarakat.com/og-image.jpg"
+  image = "https://nourbarakat.com/og-image.jpg"
 }) => {
   const schema = {
     "@context": "https://schema.org",
@@ -132,7 +132,7 @@ export const ArticleSchema: React.FC<ArticleSchemaProps> = ({
       "name": "مكتب نور بركات للمحاماة",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ksalah1.github.io/NourBarakat.com/logo.png"
+        "url": "https://nourbarakat.com/logo.png"
       }
     },
     "datePublished": publishedDate,

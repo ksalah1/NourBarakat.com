@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Live Site](https://img.shields.io/badge/Live-Site-blue?style=for-the-badge)](https://ksalah1.github.io/NourBarakat.com/)
+[![Live Site](https://img.shields.io/badge/Live-Site-blue?style=for-the-badge)](https://nourbarakat.com/)
 [![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.2-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.16-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
@@ -10,7 +10,7 @@
 
 **موقع إلكتروني احترافي لمكتب محاماة في الأردن**
 
-[العرض المباشر](https://ksalah1.github.io/NourBarakat.com/) • [التقرير عن مشكلة](https://github.com/ksalah1/NourBarakat.com/issues)
+[العرض المباشر](https://nourbarakat.com/) • [التقرير عن مشكلة](https://github.com/ksalah1/NourBarakat.com/issues)
 
 </div>
 
@@ -194,7 +194,7 @@ This contains everything you need to run your app locally.
 
 1. يتم بناء المشروع تلقائياً بواسطة GitHub Actions
 2. يتم نشر الملفات على GitHub Pages
-3. الموقع متاح على: https://ksalah1.github.io/NourBarakat.com/
+3. الموقع متاح على: https://nourbarakat.com/
 
 ### النشر يدوياً | Manual Deployment
 
@@ -290,7 +290,7 @@ grep -r "962799262786" .
 - 📍 العنوان: ابو نصير - الشارع الرئيسي - بنايه ٧١ - طابق ١ - مكتب ٣
 - 📱 الهاتف: [+962 79 926 2786](tel:+962799262786)
 - 💬 واتساب: [انقر للمراسلة](https://wa.me/962799262786)
-- 🌐 الموقع: [NourBarakat.com](https://ksalah1.github.io/NourBarakat.com/)
+- 🌐 الموقع: [NourBarakat.com](https://nourbarakat.com/)
 
 ---
 

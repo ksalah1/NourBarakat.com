@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         title="الصفحة الرئيسية"
         description="مكتب نور بركات للمحاماة في الأردن - خدمات قانونية احترافية متخصصة في قضايا التأمين، تحصيل الديون، مراجعة العقود، قانون العمل، وقضايا الإيجار. استشارة قانونية مجانية."
         keywords="محامي الأردن، مكتب محاماة عمان، قضايا تأمين، تحصيل ديون، عقود، قانون عمل، قضايا إيجار، نور بركات، محامي عمان"
-        canonicalUrl="https://ksalah1.github.io/NourBarakat.com/"
+        canonicalUrl="https://nourbarakat.com/"
       />
       <LocalBusinessSchema />
       <AttorneySchema />
