@@ -2,8 +2,18 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { services } from '../data/services';
-import { FaCheckCircle, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
+import { articles } from '../data/articles';
+import { FaCheckCircle, FaWhatsapp, FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 import SEO from '../components/SEO';
+
+// Mapping of service IDs to related article IDs
+const serviceArticleMap: Record<string, string[]> = {
+  'vehicle-insurance': ['1', '4'],
+  'financial-claims': ['2', '5', '9'],
+  'contract-review': ['3', '6'],
+  'labor-disputes': ['7', '10'],
+  'landlord-tenant': ['8']
+};
 
 const ServiceDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -21,6 +31,10 @@ const ServiceDetail: React.FC = () => {
       </div>
     );
   }
+
+  // Get related articles for this service
+  const relatedArticleIds = id ? serviceArticleMap[id] || [] : [];
+  const relatedArticles = articles.filter(article => relatedArticleIds.includes(article.id));
 
   return (
     <div className="bg-gray-50">
@@ -87,6 +101,39 @@ const ServiceDetail: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Related Articles */}
+          {relatedArticles.length > 0 && (
+            <div className="mt-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                مقالات ذات صلة
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {relatedArticles.map((article) => (
+                  <Link
+                    key={article.id}
+                    to={`/articles/${article.id}`}
+                    className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg hover:border-blue-300 transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                      <FaCalendarAlt className="text-blue-600" />
+                      <span>{article.date}</span>
+                    </div>
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 leading-tight">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                      {article.summary}
+                    </p>
+                    <div className="flex items-center text-blue-600 font-medium text-sm">
+                      <span>اقرأ المزيد</span>
+                      <FaArrowRight className="mr-2 text-xs" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Contact CTA */}
           <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 text-center text-white">
