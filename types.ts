@@ -14,6 +14,7 @@ export interface Service {
 
 export interface Article {
   id: string;
+  slug: string; // SEO-friendly URL slug
   title:string;
   author: string;
   date: string;

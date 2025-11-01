@@ -112,7 +112,7 @@ const ServiceDetail: React.FC = () => {
                 {relatedArticles.map((article) => (
                   <Link
                     key={article.id}
-                    to={`/articles/${article.id}`}
+                    to={`/articles/${article.slug}`}
                     className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg hover:border-blue-300 transition-all duration-300"
                   >
                     <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
