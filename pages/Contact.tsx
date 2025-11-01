@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
             <h3 className="text-xl font-bold text-center mb-4">العنوان</h3>
             <p className="text-gray-600 text-center">
               ابو نصير - الشارع الرئيسي<br />
-              قرب الإشارة - فوق مطعم بوبايز<br />
+               <br />
               بنايه ٧١ - طابق ١ - مكتب ٣
             </p>
           </div>
