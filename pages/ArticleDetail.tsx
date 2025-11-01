@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { articles } from '../data/articles';
 import { FaUserEdit, FaCalendarAlt, FaArrowRight, FaWhatsapp, FaPhone } from 'react-icons/fa';
 import SEO from '../components/SEO';
+import { ArticleSchema, BreadcrumbSchema } from '../components/StructuredData';
 
 const ArticleDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -72,15 +73,67 @@ const ArticleDetail: React.FC = () => {
     };
   };
 
+  // Get article-specific SEO keywords
+  const getArticleKeywords = () => {
+    const baseKeywords = 'محامية عمان، محامي الأردن، استشارات قانونية، نور بركات، قانون أردني';
+
+    const keywordMap: Record<string, string> = {
+      'vehicle-insurance-policy-importance': 'محامي تأمين مركبات عمان، بوليصة تأمين المركبات، تأمين السيارات الأردن، مطالبة تأمين مركبة، حوادث سيارات عمان',
+      'legal-notice-debt-collection-jordan': 'محامي تحصيل ديون عمان، إجراءات تحصيل ديون الأردن، الإنذار العدلي الأردن، كاتب العدل عمان، مطالبات مالية',
+      'employment-contract-essential-terms': 'محامي عقود عمل عمان، قانون العمل الأردني، بنود عقد العمل، حقوق العامل الأردن، عقد عمل في الأردن',
+      'car-accident-legal-steps-jordan': 'محامي حوادث سيارات عمان، كيف أرفع دعوى تأمين مركبة الأردن، حادث سير الأردن، خطوات بعد حادث السير، محامي تأمين مركبات',
+      'when-debt-becomes-collectible': 'محامي تحصيل ديون عمان، متى يصبح الدين قابل للتحصيل، مدة التقادم الأردن، دعوى تحصيل ديون، قانون مدني أردني',
+      'commercial-contract-essential-clauses': 'محامي مراجعة عقود عمان، مراجعة اتفاقيات شركات، عقود تجارية الأردن، صياغة عقود، محامي عقود تجارية',
+      'wrongful-termination-employee-rights': 'محامي منازعات عمالية عمان، الفصل التعسفي الأردن، حقوق العامل عمان، قضايا عمل الأردن، تعويض فصل تعسفي',
+      'eviction-procedures-landlord-rights': 'قضايا إيجار عمان، محامي إخلاء عقار، إجراءات الإخلاء الأردن، محامي مستأجر مالك عمان، عقد إيجار الأردن',
+      'debt-payment-delay-consequences': 'محامي تحصيل ديون عمان، تبعات تأخر سداد الديون، ديون تجارية الأردن، حجز تنفيذي، إجراءات تحصيل ديون',
+      'unpaid-wages-legal-steps-jordan': 'محامي منازعات عمالية عمان، عدم دفع الأجور الأردن، حقوق العامل عمان، وزارة العمل الأردن، مستحقات عمالية'
+    };
+
+    return `${keywordMap[article.slug] || article.title}، ${baseKeywords}`;
+  };
+
   const ctaContent = getCTAContent();
+
+  // Convert article date to ISO format for schema
+  const convertDateToISO = (dateStr: string): string => {
+    const arabicMonths: Record<string, string> = {
+      'يناير': '01', 'فبراير': '02', 'مارس': '03', 'أبريل': '04',
+      'مايو': '05', 'يونيو': '06', 'يوليو': '07', 'أغسطس': '08',
+      'سبتمبر': '09', 'أكتوبر': '10', 'نوفمبر': '11', 'ديسمبر': '12'
+    };
+
+    const parts = dateStr.split(' ');
+    if (parts.length === 3) {
+      const day = parts[0].padStart(2, '0');
+      const month = arabicMonths[parts[1]] || '01';
+      const year = parts[2];
+      return `${year}-${month}-${day}`;
+    }
+    return new Date().toISOString().split('T')[0];
+  };
 
   return (
     <div className="bg-gray-50">
       <SEO
-        title={`${article.title} | مقالات قانونية`}
-        description={article.summary}
-        keywords={`${article.title}، قانون أردني، مقالات قانونية، محامية عمان، استشارات قانونية`}
+        title={`${article.title} | محامية نور بركات`}
+        description={`${article.summary} - استشارة قانونية متخصصة من محامية نور بركات في عمان، الأردن.`}
+        keywords={getArticleKeywords()}
         canonicalUrl={`https://nourbarakat.com/articles/${article.slug}`}
+      />
+      <ArticleSchema
+        title={article.title}
+        description={article.summary}
+        publishedDate={convertDateToISO(article.date)}
+        author={article.author}
+        category={article.title}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'الرئيسية', url: 'https://nourbarakat.com' },
+          { name: 'المقالات', url: 'https://nourbarakat.com/articles' },
+          { name: article.title, url: `https://nourbarakat.com/articles/${article.slug}` }
+        ]}
       />
 
       {/* Article Header with gradient */}
