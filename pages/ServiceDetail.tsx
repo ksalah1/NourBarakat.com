@@ -5,6 +5,7 @@ import { services } from '../data/services';
 import { articles } from '../data/articles';
 import { FaCheckCircle, FaWhatsapp, FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 import SEO from '../components/SEO';
+import { BreadcrumbSchema } from '../components/StructuredData';
 
 // Mapping of service IDs to related article IDs
 const serviceArticleMap: Record<string, string[]> = {
@@ -36,13 +37,35 @@ const ServiceDetail: React.FC = () => {
   const relatedArticleIds = id ? serviceArticleMap[id] || [] : [];
   const relatedArticles = articles.filter(article => relatedArticleIds.includes(article.id));
 
+  // Get service-specific SEO keywords
+  const getServiceKeywords = () => {
+    const baseKeywords = 'محامية عمان، محامي الأردن، استشارات قانونية، نور بركات، خدمات قانونية عمان';
+
+    const keywordMap: Record<string, string> = {
+      'vehicle-insurance': 'محامي تأمين مركبات عمان، حوادث سيارات محامي عمان، كيف أرفع دعوى تأمين مركبة الأردن، مطالبة تأمين مركبة، مطالبات تأمين السيارات، قضايا تأمين عمان، محامي حوادث مرورية',
+      'financial-claims': 'محامي تحصيل ديون عمان، إجراءات تحصيل ديون الأردن، إجراءات تحصيل ديون شركة في الأردن، مطالبات مالية شركة عمان، الإنذار العدلي الأردن، تحصيل الديون التجارية، محامي مطالبات مالية',
+      'contract-review': 'محامي مراجعة عقود عمان، مراجعة اتفاقيات شركات عمان، صياغة عقود الأردن، مراجعة عقود تجارية، محامي عقود استثمارية، عقود الشركات عمان، مراجعة عقود عمل',
+      'labor-disputes': 'محامي منازعات عمالية عمان، قضايا عمل عمان محامي، حقوق العامل عمان محامي، الفصل التعسفي الأردن، مستحقات عمالية، قانون العمل الأردني، محامي قضايا عمالية',
+      'landlord-tenant': 'قضايا إيجار عمان، محامي إخلاء عقار محامي عمان، محامي مستأجر مالك عمان، عقود إيجار الأردن، إجراءات الإخلاء عمان، منازعات إيجارية، محامي قضايا إيجار'
+    };
+
+    return id ? `${keywordMap[id] || service.title}، ${baseKeywords}` : baseKeywords;
+  };
+
   return (
     <div className="bg-gray-50">
       <SEO
-        title={`${service.title} - الخدمات القانونية`}
-        description={service.summary}
-        keywords={`${service.title}، خدمات قانونية، محامية عمان، استشارات قانونية الأردن`}
+        title={`${service.title} | محامية نور بركات`}
+        description={`${service.summary} - خدمات قانونية احترافية من محامية نور بركات في عمان، الأردن.`}
+        keywords={getServiceKeywords()}
         canonicalUrl={`https://nourbarakat.com/services/${service.id}`}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'الرئيسية', url: 'https://nourbarakat.com' },
+          { name: 'الخدمات', url: 'https://nourbarakat.com/services' },
+          { name: service.title, url: `https://nourbarakat.com/services/${service.id}` }
+        ]}
       />
 
       {/* Hero Section */}
