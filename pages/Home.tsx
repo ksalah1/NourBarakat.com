@@ -207,7 +207,7 @@ const Home: React.FC = () => {
             {articles.slice(0, 3).map((article) => (
               <Link
                 key={article.id}
-                to={`/articles/${article.id}`}
+                to={`/articles/${article.slug}`}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
               >
                 <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-6">
