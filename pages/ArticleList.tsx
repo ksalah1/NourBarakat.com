@@ -62,7 +62,7 @@ const ArticleList: React.FC = () => {
           {filteredArticles.map((article) => (
             <Link
               key={article.id}
-              to={`/articles/${article.id}`}
+              to={`/articles/${article.slug}`}
               className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300"
             >
               <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">

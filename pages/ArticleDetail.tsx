@@ -3,10 +3,11 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { articles } from '../data/articles';
 import { FaUserEdit, FaCalendarAlt, FaArrowRight, FaWhatsapp, FaPhone } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const ArticleDetail: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  const article = articles.find((art) => art.id === id);
+  const { slug } = useParams<{ slug: string }>();
+  const article = articles.find((art) => art.slug === slug);
 
   if (!article) {
     return (
@@ -75,6 +76,13 @@ const ArticleDetail: React.FC = () => {
 
   return (
     <div className="bg-gray-50">
+      <SEO
+        title={`${article.title} | مقالات قانونية`}
+        description={article.summary}
+        keywords={`${article.title}، قانون أردني، مقالات قانونية، محامية عمان، استشارات قانونية`}
+        canonicalUrl={`https://nourbarakat.com/articles/${article.slug}`}
+      />
+
       {/* Article Header with gradient */}
       <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 md:py-24">
         <div className="container mx-auto px-6 max-w-4xl">
@@ -95,18 +103,27 @@ const ArticleDetail: React.FC = () => {
       {/* Article Content */}
       <div className="container mx-auto px-6 max-w-4xl py-12">
         <article className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+          {/* Article Summary */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <p className="text-xl text-gray-700 leading-relaxed italic">
+              {article.summary}
+            </p>
+          </div>
+
+          {/* Article Content with Enhanced Styling */}
           <div
             className="prose prose-lg max-w-none text-gray-800 leading-relaxed
                        prose-headings:text-gray-900 prose-headings:font-bold
-                       prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b-2 prose-h2:border-blue-200
+                       prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b-2 prose-h2:border-blue-200 prose-h2:text-blue-900
                        prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-blue-800
                        prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-blue-700
-                       prose-p:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed
-                       prose-ul:my-6 prose-ul:text-gray-700
-                       prose-ol:my-6 prose-ol:text-gray-700
-                       prose-li:mb-2 prose-li:leading-relaxed
+                       prose-p:mb-5 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-[1.05rem]
+                       prose-ul:my-6 prose-ul:text-gray-700 prose-ul:space-y-2
+                       prose-ol:my-6 prose-ol:text-gray-700 prose-ol:space-y-3
+                       prose-li:mb-3 prose-li:leading-relaxed prose-li:text-[1.05rem]
                        prose-strong:text-gray-900 prose-strong:font-semibold
-                       prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline"
+                       prose-a:text-blue-600 prose-a:no-underline prose-a:font-medium hover:prose-a:underline hover:prose-a:text-blue-700
+                       [&_ul]:list-disc [&_ul]:mr-6 [&_ol]:mr-6"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
 
