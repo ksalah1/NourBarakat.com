@@ -18,7 +18,10 @@ const FAQItemComponent: React.FC<{ item: typeof faqItems[0]; isOpen: boolean; on
       </button>
       {isOpen && (
         <div className="px-5 md:px-6 pb-5 md:pb-6 bg-gradient-to-b from-gray-50 to-white">
-          <p className="text-gray-700 whitespace-pre-line leading-relaxed">{item.answer}</p>
+          <div
+            className="text-gray-700 whitespace-pre-line leading-relaxed [&_a]:text-blue-600 [&_a]:font-medium [&_a]:underline hover:[&_a]:text-blue-700"
+            dangerouslySetInnerHTML={{ __html: item.answer }}
+          />
         </div>
       )}
     </div>
